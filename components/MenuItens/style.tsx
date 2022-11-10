@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ItemContainer = styled.div`
     width: 100px;
     height: 100px;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
     border-radius: 15px;
 
     display: flex;
@@ -11,7 +11,16 @@ export const ItemContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     gap: 5px;
+
+    transition: 500ms;
+
+    &:hover {
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+      cursor: pointer;
+    }
 `;
 
-export const ItemImage = styled.img`
+export const ItemText = styled.div`
+  font-weight: 400;
+  user-select: none;
 `;

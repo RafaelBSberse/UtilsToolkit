@@ -1,11 +1,15 @@
+import { ItemContainer, ItemText } from "./style";
+import { useRouter } from 'next/router'
 import Image from "next/image";
-import Head from "next/head";
-import { ItemContainer, ItemImage } from "./style";
-import toDoicon from "../../assets/images/todo-list-icon.png";
+import toDoicon from "../../assets/images/todo-icon.svg";
 
-export const MenuItens = () => {
-    return <ItemContainer>
-        <Image src={toDoicon} alt="toDo-icon" width={50} height={50}/>
-        <div>To-Do List</div>
-    </ItemContainer>;
+export const MenuItens = ({ href }: { href: string }) => {
+  const router = useRouter();
+
+  return (
+    <ItemContainer onClick={ () => router.push(href) }>
+        <Image src={toDoicon} alt="todo-icon" width={60} height={60}/>
+        <ItemText> To-Do List </ItemText>
+    </ItemContainer>
+  );
 }

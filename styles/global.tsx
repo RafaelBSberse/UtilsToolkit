@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         color: #f2f2f2;
+        font-family: 'Roboto', sans-serif;
     }
 
     body {
@@ -15,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
         height: 100vh;
     }
 
-    html, body, body > div:first-child, div#__next, div#__next > div {
+    html, body, body > div:first-child, div#__next, div#__next > div, main {
         height: 100%;
     }
 `;
